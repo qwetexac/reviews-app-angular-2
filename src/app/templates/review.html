@@ -1,0 +1,8 @@
+<span class="author">{{ author }}</span>
+<span class="date">{{ date }}</span>
+<span class="tel" *ngIf="review.tel"> | <small>Номер телефона: {{ review.tel }}</small></span>
+<div class="text">{{ text }}</div>
+<div class="icon-set">
+	<i class="fa fa-pencil" (click)="edit.emit(review)"></i>
+	<i class="fa fa-trash"(click)="delete.emit(review)"></i>
+</div>

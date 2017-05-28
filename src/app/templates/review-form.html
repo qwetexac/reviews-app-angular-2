@@ -1,0 +1,19 @@
+<form (ngSubmit)="submit(reviewForm)" #reviewForm="ngForm">
+	<h2>Оставьте свой отзыв!</h2>
+	<div class="row">
+		<div class="col50p">
+			<input type="text" name="author" placeholder="Ваше имя (обязательно)" [(ngModel)]="model.author" required>
+			<input type="text" name="tel" [(ngModel)]="model.tel" placeholder="Телефон">
+			<button type="submit" [disabled]="(!reviewForm.form.valid || !reviewForm.form.touched) && model.id == 0">Оставить отзыв</button>
+		</div>
+		<div class="col50p text">
+			<textarea 
+				placeholder="Сообщение (обязательно)" 
+				name="text" [(ngModel)]="model.text" 
+				required 
+				(keyup)="onTextChange($event)">
+			</textarea>
+			<small>Осталось {{textLeft}} знаков</small>
+		</div>
+	</div>
+</form>
