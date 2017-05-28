@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { MultiEventPlugin } from 'angular2-multievent-bindings-plugin';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
